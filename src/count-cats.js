@@ -16,8 +16,7 @@ const { NotImplementedError } = require('../extensions/index.js');
  */
 function countCats(array) {
   let countOfCats = 0;
-  // throw new NotImplementedError('Not implemented');
-  // remove line with error and write your code here
+
   for (let i of array){
     for (let u of i){
       if (u == '^^'){

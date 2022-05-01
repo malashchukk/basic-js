@@ -19,7 +19,7 @@ const { NotImplementedError } = require('../extensions/index.js');
     let spring = [2, 3, 4];
     let summer = [5, 6, 7];
     let autumn = [8, 9, 10];
-    if ( a instanceof Date && !isNaN(a) && String(a) != String(now)){
+    if (  !isNaN(a) && String(a) != String(now) && Object.prototype.toString.call(a) === '[object Date]'){
         month = a.getMonth();
         if (winter.includes(month)){
           return 'winter';
@@ -34,7 +34,7 @@ const { NotImplementedError } = require('../extensions/index.js');
           return 'autumn';
         }
     
-    } else if ( Boolean(a) == false){
+    } else if ( Boolean(a) === false){
       return 'Unable to determine the time of year!';
 
     // } else if (! a instanceof Date) {
